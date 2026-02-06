@@ -136,6 +136,31 @@ D. Finally setup S3 for remote backend and dynamodb for state locking in AWS .
 
 terraform EKS + VPC + S3 setup github repo -> https://github.com/Vishalldwivedi/EKS-Terraform-todoapp/tree/main
 
-7. 
+  
+FINAL HOW TO ACCESS THE APP -> 
+
+kubectl get svc -n frontend
+
+External LoadBalancer → Frontend
 
 
+http://<EXTERNAL-IP> 
+
+AWS cloud controller manager will give u a network load balancer for this service with is a layer 4 load balancer 
+we can also cofigure ingress for better http https based host based path based routing it will safe the cost as in loadbalancer service type for every service a new NLB is created which it not good for cost 
+
+IMPORTANT LINK-> 
+
+k8s manifests  -> https://github.com/Vishalldwivedi/gitopsTodoApp
+
+
+EKS + VPC + terraform setup + remote backend as IAC -> https://github.com/Vishalldwivedi/EKS-Terraform-todoapp
+
+
+Jenkins Shared LIB(clean reusable code) => https://github.com/Vishalldwivedi/JenkinsSharedLib
+
+
+
+![AWS and EKS Architecture
+
+](<WhatsApp Image 2026-02-07 at 00.25.50.jpeg>)
